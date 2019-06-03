@@ -1,0 +1,32 @@
+<script type="text/x-red" data-template-name="interpolate">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+	<div class="form-row">
+        <label for="node-input-storename"><i class="icon-bookmark"></i> Context store name</label>
+        <input type="text" id="node-input-storename">
+    </div>
+</script>
+
+
+<script type="text/x-red" data-help-name="interpolate">
+    <p>A node to interpolate discrete data points in a (1-D) array</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('interpolate', {
+        category: 'function',
+        color: '#ffffff',
+        defaults: {
+            name: {value: ""},
+			storename: {value: 'file'}
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function () {
+            return (this.groupaddr || this.name || "interpolate");
+        }
+    });
+</script>
+
