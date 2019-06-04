@@ -44,7 +44,8 @@ The configuration of the node allows to select a specified context store for sto
 
 ## Limitations
 
-* At this point, the node only performs _linear_ interpolation.
+* The node only performs _linear_ interpolation.
+* The node only performs one-dimensional interpolation.
 * The node only performs interpolation, not extrapolation. If one would e.g. calculate the temperature at a height of 200 meters in our example above, the node would just return the last available value of the grid (i.e. the temperature at 100 meters height.)
 
 Note, however, that the data points don't have to be spaced equally (also compare the example above).
